@@ -1,0 +1,146 @@
+/***** general *****/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 1200px;
+	background: #eee;
+	padding: 0 20px;
+}
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+/***** navigation *****/
+
+.nav {
+	text-align: center;
+	margin-bottom: 20px;
+	background: #ccc;
+}
+
+.nav li {
+	display: inline-block;
+}
+
+.nav a {
+	display: inline-block;
+	padding: 10px 16px 10px 0;
+	color: green;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.nav a::before {
+	content: '|';
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.nav a.first::before {
+	display: none;
+}
+
+/***** columns *****/
+
+.column.side {
+	width: 30%;
+}
+
+.column.main {
+	width: 70%;
+}
+
+.column.left {
+	padding-right: 20px;
+}
+
+/***** boxes *****/
+
+.box {
+	background: #ccccaa;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.box .heading {
+	padding: 0;
+	margin: 5px 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.box .sub-heading {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	color: #555588;
+}
+
+.box-round {
+	border-radius: 10px;
+}
+
+.box-text-small {
+	font-size: 14px;
+}
+
+.box-red {
+	background: #ccb9aa;
+}
+
+.box-heading-right .heading {
+	text-align: right;
+}
+
+.box-small {
+	width: 48.8%;
+}
+
+/***** buttons *****/
+
+.button {
+	display: inline-block;
+	padding: 5px 15px;
+	background: #555;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #999;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: inherit;
+}
+
+.button-violet {
+	background: #557;
+}
+
+.button-large {
+	font-size: 16px;
+	padding: 10px 30px;
+}
