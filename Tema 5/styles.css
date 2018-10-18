@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 30px;
+}
+ul {
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+}
+li {
+	flex: 0 0 10%;
+}
+li::after {
+	content: '';
+	display: block;
+	padding-bottom: 100%;
+	background-color: #999;
+	margin: 1px;
+}
+
+/*========================= patrate rosii =========================*/
+
+ul li:nth-child(12n+1)::after {
+	background: red;
+	transform: rotate(-12deg);
+}
+
+ul li:nth-child(24n+1)::after {
+	transform: rotate(12deg);
+}
+
+/*========================= patrate negre =========================*/
+
+ul li:nth-child(2n+2)::after {
+	background: #666;
+}
+
+/*========================== dreptunghiuri ========================*/
+
+ul li:nth-child(3n+3) {
+	flex: 20%
+}
+
+ul li:nth-child(3n+3)::after {
+	padding-bottom: 50%; /*2:1 aspect ratio*/
+	background-color: #999;
+}
+
+ul li:nth-child(6n+6)::after {
+	padding-bottom: 50%; /*2:1 aspect ratio*/
+	background-color: #666;
+}
+
+/*====================== opacitate top to bottom ===================*/
+
+ul li:nth-child(-n+38)::after {
+	opacity: 0.85;
+}
+
+ul li:nth-child(-n+30)::after {
+	opacity: 0.70;
+}
+
+ul li:nth-child(-n+23)::after {
+	opacity: 0.55;
+}
+
+ul li:nth-child(-n+15)::after {
+	opacity: 0.40;
+}
+
+ul li:nth-child(-n+8)::after {
+	opacity: 0.25;
+}
+
+/*====================== opacitate bottom to top ====================*/
+
+ul li:nth-last-child(-n+38)::after {
+	opacity: 0.85;
+}
+
+ul li:nth-last-child(-n+30)::after {
+	opacity: 0.70;
+}
+
+ul li:nth-last-child(-n+23)::after {
+	opacity: 0.55;
+}
+
+ul li:nth-last-child(-n+15)::after {
+	opacity: 0.40;
+}
+
+ul li:nth-last-child(-n+8)::after {
+	opacity: 0.25;
+}
+
+/*===*/
+
+ul li:nth-child(n+1):nth-child(-n+8)::after {
+	border: 3px solid rgb(160, 8, 8);
+}
+
+ul li:nth-child(n+9):nth-child(-n+15)::after {
+	border: 3px solid rgb(247, 0, 0);
+}
+
+ul li:nth-child(n+16):nth-child(-n+23)::after {
+	border: 3px solid rgb(255, 72, 0);
+}
+
+ul li:nth-child(n+24):nth-child(-n+30)::after {
+	border: 3px solid rgb(255, 153, 0);
+}
+
+ul li:nth-child(n+31):nth-child(-n+38)::after {
+	border: 3px solid yellow;
+}
+
+ul li:nth-child(n+39):nth-child(-n+45)::after {
+	border: 3px solid yellowgreen;
+}
+
+	
